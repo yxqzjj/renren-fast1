@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.modules.generator.dao.WcsWorkplanDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.renren.modules.generator.entity.WcsWorkplanEntity" id="wcsWorkplanMap">
+        <result property="id" column="ID"/>
+        <result property="mckey" column="Mckey"/>
+        <result property="type" column="Type"/>
+        <result property="barcode" column="Barcode"/>
+        <result property="createTime" column="Create_Time"/>
+        <result property="startTime" column="Start_Time"/>
+        <result property="finishTime" column="Finish_Time"/>
+        <result property="status" column="Status"/>
+        <result property="fromStation" column="From_Station"/>
+        <result property="toStation" column="To_Station"/>
+        <result property="fromLocation" column="From_Location"/>
+        <result property="toLocation" column="To_Location"/>
+        <result property="wmsFlag" column="WMS_Flag"/>
+        <result property="priorityConfigPriority" column="Priority_Config_Priority"/>
+        <result property="reserved1" column="Reserved1"/>
+        <result property="reserved2" column="Reserved2"/>
+        <result property="warehouseNo" column="Warehouse_No"/>
+    </resultMap>
+
+
+</mapper>

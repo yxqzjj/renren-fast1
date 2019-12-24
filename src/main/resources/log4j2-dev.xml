@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="30">
+    <Properties>
+        <Property name="LOG_PATTERN">
+            %d{yyyy-MM-dd HH:mm:ss.SSS} %5p --- [%15.15t] %-40.40c{1.} : %m%n%ex
+        </Property>
+        <property name="log_path">D:/logs</property>
+        <property name="file_name_xmlMsgQueue">xmlMsgQueue</property>
+        <property name="file_name_xml_msg_operation">xmlMsgOperation</property>
+        <property name="file_name_assigningTask">assigningTask</property>
+        <property name="file_name_blockBrick">blockBrick</property>
+        <property name="file_name_msgCustomer">msgCustomer</property>
+        <property name="file_name_msgQueue">msgQueue</property>
+        <property name="file_name_msgHeartMachineStatus">msgHeartMachineStatus</property>
+        <property name="file_name_workPlan">workPlan</property>
+        <property name="file_name_charge">charge</property>
+        <property name="file_name_standbyCar">standbyCar</property>
+        <property name="file_name_operationLog">operationLog</property>
+    </Properties>
+
+    <Appenders>
+        <Console name="ConsoleAppender" target="SYSTEM_OUT">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+        </Console>
+        <RollingFile name="xmlMsgQueue"
+                     fileName="${log_path}/${file_name_xmlMsgQueue}.log"
+                     filePattern="${log_path}/%d{yyyy-MM-dd}/%d{HH}/${file_name_xmlMsgQueue}.log">
+            <!-- 输出格式，这里没有在上面的properties中定义 -->
+            <PatternLayout pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%thread] - %msg%n"/>
+            <!-- 设置策略 ，，interval="1"代表一个小时生成一个文件-->
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="xmlMsgOperation"
+                     fileName="${log_path}/${file_name_xml_msg_operation}.log"
+                     filePattern="${log_path}/%d{yyyy-MM-dd}/%d{HH}/${file_name_xml_msg_operation}.log">
+            <!-- 输出格式，这里没有在上面的properties中定义 -->
+            <PatternLayout pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%file:%line] - %msg%n"/>
+            <!-- 设置策略 ，，interval="1"代表一个小时生成一个文件-->
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="assigningTask"
+                     fileName="${log_path}/${file_name_assigningTask}.log"
+                     filePattern="${log_path}/%d{yyyy-MM-dd}/%d{HH}/${file_name_assigningTask}.log">
+            <!-- 输出格式，这里没有在上面的properties中定义 -->
+            <PatternLayout pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%file:%line] - %msg%n"/>
+            <!-- 设置策略 ，，interval="1"代表一个小时生成一个文件-->
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="blockBrick" fileName="${log_path}/${file_name_blockBrick}.log"
+                     filePattern="${log_path}/%d{yyyy-MM-dd}/%d{HH}/${file_name_blockBrick}.log">
+            <!-- 输出格式，这里没有在上面的properties中定义 -->
+            <PatternLayout pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%file:%line] - %msg%n"/>
+            <!-- 设置策略 ，，interval="1"代表一个小时生成一个文件-->
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="msgCustomer"
+                     fileName="${log_path}/${file_name_msgCustomer}.log"
+                     filePattern="${log_path}/%d{yyyy-MM-dd}/%d{HH}/${file_name_msgCustomer}.log">
+            <!-- 输出格式，这里没有在上面的properties中定义 -->
+            <PatternLayout pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%file:%line] - %msg%n"/>
+            <!-- 设置策略 ，，interval="1"代表一个小时生成一个文件-->
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="msgHeartMachineStatus" fileName="${log_path}/${file_name_msgHeartMachineStatus}.log"
+                     filePattern="${log_path}/%d{yyyy-MM-dd}/%d{HH}/${file_name_msgHeartMachineStatus}.log">
+            <!-- 输出格式，这里没有在上面的properties中定义 -->
+            <PatternLayout pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%file:%line] - %msg%n"/>
+            <!-- 设置策略 ，，interval="1"代表一个小时生成一个文件-->
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="msgQueue" fileName="${log_path}/${file_name_msgQueue}.log"
+                     filePattern="${log_path}/%d{yyyy-MM-dd}/%d{HH}/${file_name_msgQueue}.log">
+            <!-- 输出格式，这里没有在上面的properties中定义 -->
+            <PatternLayout pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%file:%line] - %msg%n"/>
+            <!-- 设置策略 ，，interval="1"代表一个小时生成一个文件-->
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="workPlan" fileName="${log_path}/${file_name_workPlan}.log"
+                     filePattern="${log_path}/%d{yyyy-MM-dd}/%d{HH}/${file_name_workPlan}.log">
+            <!-- 输出格式，这里没有在上面的properties中定义 -->
+            <PatternLayout pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%file:%line] - %msg%n"/>
+            <!-- 设置策略 ，，interval="1"代表一个小时生成一个文件-->
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="charge" fileName="${log_path}/${file_name_charge}.log"
+                     filePattern="${log_path}/%d{yyyy-MM-dd}/%d{HH}/${file_name_charge}.log">
+            <!-- 输出格式，这里没有在上面的properties中定义 -->
+            <PatternLayout pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%file:%line] - %msg%n"/>
+            <!-- 设置策略 ，，interval="1"代表一个小时生成一个文件-->
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="standbyCar" fileName="${log_path}/${file_name_standbyCar}.log"
+                     filePattern="${log_path}/%d{yyyy-MM-dd}/%d{HH}/${file_name_standbyCar}.log">
+            <!-- 输出格式，这里没有在上面的properties中定义 -->
+            <PatternLayout pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%file:%line] - %msg%n"/>
+            <!-- 设置策略 ，，interval="1"代表一个小时生成一个文件-->
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingFile>
+        <RollingFile name="operationLog" fileName="${log_path}/${file_name_operationLog}.log"
+                     filePattern="${log_path}/%d{yyyy-MM-dd}/%d{HH}/${file_name_operationLog}.log">
+            <!-- 输出格式，这里没有在上面的properties中定义 -->
+            <PatternLayout pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%file:%line] - %msg%n"/>
+            <!-- 设置策略 ，，interval="1"代表一个小时生成一个文件-->
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="xmlMsgQueue" level="info" additivity="false">
+            <AppenderRef ref="xmlMsgQueue"/>
+        </Logger>
+        <Logger name="xmlMsgOperation" level="info" additivity="false">
+            <AppenderRef ref="xmlMsgOperation"/>
+        </Logger>
+        <Logger name="assigningTask" level="info" additivity="false">
+            <AppenderRef ref="assigningTask"/>
+        </Logger>
+        <Logger name="blockBrick" level="info" additivity="false">
+            <AppenderRef ref="blockBrick"/>
+        </Logger>
+        <Logger name="msgCustomer" level="info" additivity="false">
+            <AppenderRef ref="msgCustomer"/>
+        </Logger>
+        <Logger name="msgQueue" level="info" additivity="false">
+            <AppenderRef ref="msgQueue"/>
+        </Logger>
+        <Logger name="msgHeartMachineStatus" level="info" additivity="false">
+            <AppenderRef ref="msgHeartMachineStatus"/>
+        </Logger>
+        <Logger name="workPlan" level="info" additivity="false">
+            <AppenderRef ref="workPlan"/>
+        </Logger>
+        <Logger name="charge" level="info" additivity="false">
+            <AppenderRef ref="charge"/>
+        </Logger>
+        <Logger name="standbyCar" level="info" additivity="false">
+            <AppenderRef ref="standbyCar"/>
+        </Logger>
+        <Logger name="operationLog" level="info" additivity="false">
+            <AppenderRef ref="operationLog"/>
+        </Logger>
+        <Root level="info">
+            <AppenderRef ref="ConsoleAppender"/>
+        </Root>
+    </Loggers>
+</Configuration>

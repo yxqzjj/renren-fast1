@@ -1,0 +1,59 @@
+# wcs-wms通讯开启/关闭
+system-config.wmsOpen: true
+# 系统工作模式 test 测试/prod  生产
+system-config.mode: prod
+# 当前项目适用于那个项目
+# 泰州伽力森
+system-config.company: KERISOM
+# 四川永祥
+#system-config.kerisom: YONGXIANG
+# 自动回原点功能开关
+system-config.autoBackLocation: true
+# 堆垛机卸车卸货之后执行接车任务
+system-config.autoGetCar: true
+# 出库优先卸车
+system-config.outStorageOffCar: false
+# 堆垛机二次移动功能开关
+system-config.mlRemove: true
+# 消息重发时间间隔 秒
+system-config.resendTimeInterval: 2
+# 消息重发最大次数
+system-config.resendMmax: 8
+# 超时未工作时间（分钟）
+system-config.waitWorkOvertime: 5
+# 任务分配查询时间间隔 秒
+system-config.selectTaskingTime: 1
+# 子车充电完成电量
+system-config.scChargeFinishKwh: 90
+# 子车可工作电量
+system-config.scWorkMinKwh: 80
+# 子车最小充电电量
+system-config.scChargeMinKwh: 30
+# 子车充电在直行巷道中的位置A
+system-config.chargeLocationA: 030002001
+# 子车充电在直行巷道中的位置B
+system-config.chargeLocationB: 002002001
+# 备用子车放置货架位置点
+system-config.standbyCarLocation: 001006001
+# 不用主车放置货架位置点
+system-config.nonuseCarLocation: 001007001
+# 子车临时放置货架位置点
+system-config.temporaryLocation: 001005001
+# 自动切换备车功能开关
+system-config.standbyCarSwitch: false
+# 穿梭车电量预警区间逻辑开关
+system-config.kwhLowerSwitch: false
+# 23命令更改载荷状态开关
+system-config.msgCycleOrderAckDtoUpdateLoad: false
+# 心跳周期 秒
+system-config.heartBeatAsk: 10
+# 心跳超时关闭标识
+system-config.heartBeatAskOutCloseFlag: true
+# 心跳超时时间 秒
+system-config.heartBeatAskOutTime: 120
+# 状态周期 秒
+system-config.machineStatusAsk: 10
+# 心跳询问开关
+system-config.heartBeatAskSwitch: true
+# 状态询问开关
+system-config.machineStatusAskSwitch: true

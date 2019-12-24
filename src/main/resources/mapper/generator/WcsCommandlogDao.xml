@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.modules.generator.dao.WcsCommandlogDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.renren.modules.generator.entity.WcsCommandlogEntity" id="wcsCommandlogMap">
+        <result property="id" column="ID"/>
+        <result property="command" column="Command"/>
+        <result property="seqNo" column="Seq_No"/>
+        <result property="createTime" column="Create_Time"/>
+        <result property="blockName" column="Block_Name"/>
+        <result property="cycleCommand" column="Cycle_Command"/>
+        <result property="cycleType" column="Cycle_Type"/>
+        <result property="mckey" column="McKey"/>
+        <result property="station" column="Station"/>
+        <result property="dock" column="Dock"/>
+        <result property="tier" column="Tier"/>
+        <result property="line" column="Line"/>
+        <result property="row" column="Row"/>
+        <result property="load" column="Load"/>
+        <result property="ackType" column="Ack_Type"/>
+        <result property="errorType" column="Error_Type"/>
+        <result property="finishType" column="Finish_Type"/>
+        <result property="resend" column="Resend"/>
+        <result property="reserved1" column="Reserved1"/>
+        <result property="reserved2" column="Reserved2"/>
+    </resultMap>
+
+
+</mapper>

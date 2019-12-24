@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.modules.generator.dao.WcsPlcconfigDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.renren.modules.generator.entity.WcsPlcconfigEntity" id="wcsPlcconfigMap">
+        <result property="id" column="ID"/>
+        <result property="name" column="Name"/>
+        <result property="ip" column="IP"/>
+        <result property="port" column="Port"/>
+        <result property="status" column="Status"/>
+        <result property="heartbeatTime" column="HeartBeat_Time"/>
+        <result property="reserved1" column="Reserved1"/>
+    </resultMap>
+
+
+</mapper>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.modules.generator.dao.WcsMachineDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.renren.modules.generator.entity.WcsMachineEntity" id="wcsMachineMap">
+        <result property="id" column="ID"/>
+        <result property="name" column="Name"/>
+        <result property="blockName" column="Block_Name"/>
+        <result property="plcName" column="Plc_Name"/>
+        <result property="type" column="Type"/>
+        <result property="stationName" column="Station_Name"/>
+        <result property="dockName" column="Dock_Name"/>
+        <result property="reserved1" column="Reserved1"/>
+        <result property="reserved2" column="Reserved2"/>
+        <result property="warehouseNo" column="Warehouse_No"/>
+        <result property="taskFlag" column="Task_Flag"/>
+    </resultMap>
+
+
+</mapper>
