@@ -19,11 +19,11 @@ import io.renren.common.utils.R;
 
 
 /**
- * ${comments}
+ * 命令消息记录表
  *
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2019-12-20 10:56:28
+ * @author yxq
+ * @email yxq@163.com
+ * @date 2019-12-27 12:11:13
  */
 @RestController
 @RequestMapping("generator/wcscommandlog")

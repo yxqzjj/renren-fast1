@@ -7,11 +7,11 @@ import io.renren.modules.generator.entity.WcsPlcconfigEntity;
 import java.util.Map;
 
 /**
- * ${comments}
+ * plc配置表
  *
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2019-12-20 16:35:23
+ * @author yxq
+ * @email yxq@163.com
+ * @date 2019-12-27 12:11:12
  */
 public interface WcsPlcconfigService extends IService<WcsPlcconfigEntity> {
 

@@ -7,11 +7,11 @@ import io.renren.modules.generator.entity.WcsWmsmessagelogEntity;
 import java.util.Map;
 
 /**
- * ${comments}
+ * WMS消息记录表
  *
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2019-12-20 10:48:11
+ * @author yxq
+ * @email yxq@163.com
+ * @date 2019-12-27 12:40:18
  */
 public interface WcsWmsmessagelogService extends IService<WcsWmsmessagelogEntity> {
 

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.modules.generator.dao.WcsClcrossroutedetailDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.renren.modules.generator.entity.WcsClcrossroutedetailEntity" id="wcsClcrossroutedetailMap">
+        <result property="id" column="ID"/>
+        <result property="startBlockName" column="Start_Block_Name"/>
+        <result property="runBlockName" column="Run_Block_Name"/>
+        <result property="endBlockName" column="End_Block_Name"/>
+        <result property="endStation" column="End_Station"/>
+        <result property="type" column="Type"/>
+        <result property="isSameBlockCrossRoute" column="Is_Same_Block_Cross_Route"/>
+    </resultMap>
+
+
+</mapper>

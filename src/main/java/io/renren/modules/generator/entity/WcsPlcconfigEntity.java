@@ -8,11 +8,11 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * ${comments}
+ * plc配置表
  * 
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2019-12-20 16:35:23
+ * @author yxq
+ * @email yxq@163.com
+ * @date 2019-12-27 12:11:12
  */
 @Data
 @TableName("WCS_PlcConfig")
@@ -20,32 +20,32 @@ public class WcsPlcconfigEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * $column.comments
+	 * 序号
 	 */
 	@TableId
 	private Integer id;
 	/**
-	 * $column.comments
+	 * plc名称
 	 */
 	private String name;
 	/**
-	 * $column.comments
+	 * ip地址
 	 */
 	private String ip;
 	/**
-	 * $column.comments
+	 * 端口号
 	 */
 	private Integer port;
 	/**
-	 * $column.comments
+	 * 状态
 	 */
 	private Integer status;
 	/**
-	 * $column.comments
+	 * 心跳
 	 */
 	private Date heartbeatTime;
 	/**
-	 * $column.comments
+	 * 预留字段
 	 */
 	private String reserved1;
 

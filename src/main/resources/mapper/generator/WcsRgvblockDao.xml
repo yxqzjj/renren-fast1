@@ -5,7 +5,7 @@
 
 	<!-- 可根据自己的需求，是否要使用 -->
     <resultMap type="io.renren.modules.generator.entity.WcsRgvblockEntity" id="wcsRgvblockMap">
-        <result property="id" column="ID"/>
+        <result property="id" column="Id"/>
         <result property="name" column="Name"/>
         <result property="mckey" column="McKey"/>
         <result property="appointmentMckey" column="Appointment_McKey"/>

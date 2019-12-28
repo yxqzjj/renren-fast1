@@ -8,11 +8,11 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * ${comments}
+ * 命令消息记录表
  * 
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2019-12-20 10:56:28
+ * @author yxq
+ * @email yxq@163.com
+ * @date 2019-12-27 12:11:13
  */
 @Data
 @TableName("WCS_CommandLog")
@@ -20,84 +20,84 @@ public class WcsCommandlogEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * $column.comments
+	 * 序号
 	 */
 	@TableId
 	private Integer id;
 	/**
-	 * $column.comments
+	 * 命令
 	 */
 	private String command;
 	/**
-	 * $column.comments
+	 * 消息序号
 	 */
 	private String seqNo;
 	/**
-	 * $column.comments
+	 * 创建时间
 	 */
 	private Date createTime;
 	/**
-	 * $column.comments
+	 * 数据block名称
 	 */
 	private String blockName;
 	/**
-	 * $column.comments
+	 * Cycle命令
 	 */
 	private String cycleCommand;
 	/**
-	 * $column.comments
+	 * Cycle区分
 	 */
 	private String cycleType;
 	/**
-	 * $column.comments
+	 * 搬运货物唯一标识
 	 */
 	private String mckey;
 	/**
-	 * $column.comments
+	 * 站台
 	 */
 	private String station;
 	/**
-	 * $column.comments
+	 * 码头
 	 */
 	private String dock;
 	/**
-	 * $column.comments
+	 * 层
 	 */
 	private String tier;
 	/**
-	 * $column.comments
+	 * 列
 	 */
 	private String line;
 	/**
-	 * $column.comments
+	 * 排
 	 */
 	private String row;
 	/**
-	 * $column.comments
+	 * 载荷状态
 	 */
 	private String load;
 	/**
-	 * $column.comments
+	 * 应答区分
 	 */
 	private String ackType;
 	/**
-	 * $column.comments
+	 * 异常区分
 	 */
 	private String errorType;
 	/**
-	 * $column.comments
+	 * 完成区分
 	 */
 	private String finishType;
 	/**
-	 * $column.comments
+	 * 重发标识
 	 */
 	private String resend;
 	/**
-	 * $column.comments
+	 * 预留字段1
 	 */
 	private String reserved1;
 	/**
-	 * $column.comments
+	 * 预留字段2
 	 */
 	private String reserved2;
 

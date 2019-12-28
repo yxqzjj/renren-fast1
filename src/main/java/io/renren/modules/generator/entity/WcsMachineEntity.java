@@ -8,11 +8,11 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * ${comments}
+ * 设备信息表
  * 
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2019-12-20 16:39:45
+ * @author yxq
+ * @email yxq@163.com
+ * @date 2019-12-27 12:11:12
  */
 @Data
 @TableName("WCS_Machine")
@@ -20,48 +20,48 @@ public class WcsMachineEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * $column.comments
+	 * 序号
 	 */
 	@TableId
 	private Integer id;
 	/**
-	 * $column.comments
+	 * 设备名称
 	 */
 	private String name;
 	/**
-	 * $column.comments
+	 * block名称
 	 */
 	private String blockName;
 	/**
-	 * $column.comments
+	 * plc名称
 	 */
 	private String plcName;
 	/**
-	 * $column.comments
+	 * 设备类型
 	 */
 	private Integer type;
 	/**
-	 * $column.comments
+	 * 站台名称
 	 */
 	private String stationName;
 	/**
-	 * $column.comments
+	 * 码头名称
 	 */
 	private String dockName;
 	/**
-	 * $column.comments
+	 * 预留字段1
 	 */
 	private String reserved1;
 	/**
-	 * $column.comments
+	 * 预留字段2
 	 */
 	private String reserved2;
 	/**
-	 * $column.comments
+	 * 仓库编号
 	 */
 	private Integer warehouseNo;
 	/**
-	 * $column.comments
+	 * 任务分配标识
 	 */
 	private Boolean taskFlag;
 

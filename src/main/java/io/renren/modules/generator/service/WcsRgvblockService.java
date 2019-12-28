@@ -7,11 +7,11 @@ import io.renren.modules.generator.entity.WcsRgvblockEntity;
 import java.util.Map;
 
 /**
- * ${comments}
+ * RGV数据block表
  *
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2019-12-20 09:26:00
+ * @author yxq
+ * @email yxq@163.com
+ * @date 2019-12-27 12:11:12
  */
 public interface WcsRgvblockService extends IService<WcsRgvblockEntity> {
 

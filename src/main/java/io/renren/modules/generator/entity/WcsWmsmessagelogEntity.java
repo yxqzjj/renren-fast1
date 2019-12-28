@@ -8,11 +8,11 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * ${comments}
+ * WMS消息记录表
  * 
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2019-12-20 10:48:11
+ * @author yxq
+ * @email yxq@163.com
+ * @date 2019-12-27 12:40:18
  */
 @Data
 @TableName("WCS_WMSMessageLog")
@@ -20,48 +20,48 @@ public class WcsWmsmessagelogEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * $column.comments
+	 * 序号
 	 */
 	@TableId
 	private Integer id;
 	/**
-	 * $column.comments
+	 * WMS任务唯一标识
 	 */
 	private String wmsId;
 	/**
-	 * $column.comments
+	 * 工作计划序号
 	 */
 	private Integer workPlanId;
 	/**
-	 * $column.comments
+	 * 消息类型
 	 */
 	private String type;
 	/**
-	 * $column.comments
+	 * 创建时间
 	 */
 	private Date createTime;
 	/**
-	 * $column.comments
+	 * 托盘号
 	 */
 	private String barcode;
 	/**
-	 * $column.comments
+	 * 状态
 	 */
 	private Integer status;
 	/**
-	 * $column.comments
+	 * 内容
 	 */
 	private String message;
 	/**
-	 * $column.comments
+	 * 预留字段1
 	 */
 	private String reserved1;
 	/**
-	 * $column.comments
+	 * 预留字段2
 	 */
 	private String reserved2;
 	/**
-	 * $column.comments
+	 * 消息标识
 	 */
 	private String uuid;
 

@@ -8,11 +8,11 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * ${comments}
+ * RGV数据block表
  * 
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2019-12-20 09:26:00
+ * @author yxq
+ * @email yxq@163.com
+ * @date 2019-12-27 12:11:12
  */
 @Data
 @TableName("WCS_RGVBlock")
@@ -25,15 +25,15 @@ public class WcsRgvblockEntity implements Serializable {
 	@TableId
 	private Integer id;
 	/**
-	 * block名称
+	 * 数据block名称
 	 */
 	private String name;
 	/**
-	 * Mckey
+	 * 搬运货物唯一标识
 	 */
 	private String mckey;
 	/**
-	 * 预约Mckey
+	 * 预约搬运货物唯一标识
 	 */
 	private String appointmentMckey;
 	/**
@@ -41,7 +41,7 @@ public class WcsRgvblockEntity implements Serializable {
 	 */
 	private String command;
 	/**
-	 * 异常吗
+	 * 异常码
 	 */
 	private String errorCode;
 	/**
@@ -53,15 +53,15 @@ public class WcsRgvblockEntity implements Serializable {
 	 */
 	private Boolean isLoad;
 	/**
-	 * 当前交互设备
+	 * 一起工作数据block名称
 	 */
 	private String withWorkBlockName;
 	/**
-	 * 停靠设备
+	 * 停泊位置设备数据Block名称
 	 */
 	private String berthBlockName;
 	/**
-	 * 预留字段1
+	 * 预留字段1（预约任务交互设备名称）
 	 */
 	private String reserved1;
 	/**

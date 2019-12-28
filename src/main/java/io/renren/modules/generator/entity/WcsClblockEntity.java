@@ -8,11 +8,11 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * ${comments}
+ * 输送线数据block表
  * 
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2019-12-20 10:25:28
+ * @author yxq
+ * @email yxq@163.com
+ * @date 2019-12-27 12:11:13
  */
 @Data
 @TableName("WCS_CLBlock")
@@ -43,11 +43,11 @@ public class WcsClblockEntity implements Serializable {
 	/**
 	 * 异常吗
 	 */
-	private String  errorCode;
+	private String errorCode;
 	/**
 	 * 状态码
 	 */
-	private String  status;
+	private String status;
 	/**
 	 * 载荷状态
 	 */

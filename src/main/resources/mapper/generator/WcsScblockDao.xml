@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.renren.modules.generator.dao.WcsScblockDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.renren.modules.generator.entity.WcsScblockEntity" id="wcsScblockMap">
+        <result property="id" column="ID"/>
+        <result property="name" column="Name"/>
+        <result property="mckey" column="McKey"/>
+        <result property="appointmentMckey" column="Appointment_McKey"/>
+        <result property="command" column="Command"/>
+        <result property="errorCode" column="Error_Code"/>
+        <result property="status" column="Status"/>
+        <result property="isLoad" column="Is_Load"/>
+        <result property="withWorkBlockName" column="With_Work_Block_Name"/>
+        <result property="berthBlockName" column="Berth_Block_Name"/>
+        <result property="hostBlockName" column="Host_Block_Name"/>
+        <result property="kwh" column="KWH"/>
+        <result property="lastWorkTime" column="Last_Work_Time"/>
+        <result property="row" column="Row"/>
+        <result property="line" column="Line"/>
+        <result property="tier" column="Tier"/>
+        <result property="reserved1" column="Reserved1"/>
+        <result property="reserved2" column="Reserved2"/>
+        <result property="isStandbyCar" column="Is_Standby_Car"/>
+        <result property="isUse" column="Is_Use"/>
+    </resultMap>
+
+
+</mapper>

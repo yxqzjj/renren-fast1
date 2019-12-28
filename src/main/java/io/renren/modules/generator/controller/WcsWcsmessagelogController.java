@@ -19,11 +19,11 @@ import io.renren.common.utils.R;
 
 
 /**
- * ${comments}
+ * WCS消息记录表
  *
- * @author chenshun
- * @email sunlightcs@gmail.com
- * @date 2019-12-20 11:06:48
+ * @author yxq
+ * @email yxq@163.com
+ * @date 2019-12-27 12:11:11
  */
 @RestController
 @RequestMapping("generator/wcswcsmessagelog")
