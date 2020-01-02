@@ -3,6 +3,7 @@ package io.renren.modules.generator.dao;
 import io.renren.modules.generator.entity.WcsRoutestationstartendEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
 
 /**
  * 路径起止表

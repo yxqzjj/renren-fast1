@@ -3,9 +3,9 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-      url: jdbc:sqlserver://192.168.1.11:1433;DatabaseName=renren_fast
+      url: jdbc:sqlserver://localhost:1433;DatabaseName=ren_wcs
       username: sa
-      password: 123456
+      password: yxq3711
       initial-size: 10
       max-active: 100
       min-idle: 10

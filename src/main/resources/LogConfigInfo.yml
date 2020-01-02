@@ -1,0 +1,6 @@
+# log日志记录路径
+log-config.logsPath: D:\\logs\\
+# 自动删除过期日志开关
+log-config.deleteLogSwitch: true
+# 日志保留天数
+log-config.logReserveTime: 7

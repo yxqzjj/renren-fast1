@@ -25,7 +25,6 @@ import java.util.Map;
  *
  * @author Mark sunlightcs@gmail.com
  */
-@RestController
 @RequestMapping("/sys/schedule")
 public class ScheduleJobController {
 	@Autowired

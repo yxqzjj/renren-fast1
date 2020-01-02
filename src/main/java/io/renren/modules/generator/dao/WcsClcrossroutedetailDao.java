@@ -3,6 +3,7 @@ package io.renren.modules.generator.dao;
 import io.renren.modules.generator.entity.WcsClcrossroutedetailEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
 
 /**
  * 输送线交叉路径详情

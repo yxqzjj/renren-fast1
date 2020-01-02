@@ -38,7 +38,6 @@ public class WcsMachineController {
     @RequiresPermissions("generator:wcsmachine:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = wcsMachineService.queryPage(params);
-
         return R.ok().put("page", page);
     }
 

@@ -1,10 +1,10 @@
 package io.renren.modules.generator.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.io.Serializable;
-import java.util.Date;
 import lombok.Data;
 
 /**
@@ -16,9 +16,10 @@ import lombok.Data;
  */
 @Data
 @TableName("WCS_Machine")
-public class WcsMachineEntity implements Serializable {
+public class WcsMachineEntity  implements Serializable  {
 	private static final long serialVersionUID = 1L;
-
+	@TableField(exist = false)
+	private String defaultLocation;
 	/**
 	 * 序号
 	 */

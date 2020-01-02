@@ -1,0 +1,8 @@
+# wms名称
+wms.name: wms
+# wms端口号
+wms.port: 20000
+# LoadUnitAtID消息重发时间间隔 秒
+wms.resendLoadUnitAtIDTimeInterval: 8
+# LoadUnitAtID消息重发最大次数
+wms.resendLoadUnitAtIDMax: 5

@@ -16,7 +16,7 @@ import lombok.Data;
  */
 @Data
 @TableName("WCS_MCBlock")
-public class WcsMcblockEntity implements Serializable {
+public class WcsMcblockEntity extends Block implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
