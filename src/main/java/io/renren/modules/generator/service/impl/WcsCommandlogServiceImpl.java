@@ -20,7 +20,7 @@ public class WcsCommandlogServiceImpl extends ServiceImpl<WcsCommandlogDao, WcsC
     public PageUtils queryPage(Map<String, Object> params) {
         IPage<WcsCommandlogEntity> page = this.page(
                 new Query<WcsCommandlogEntity>().getPage(params),
-                new QueryWrapper<WcsCommandlogEntity>()
+                new QueryWrapper<WcsCommandlogEntity>().orderByDesc("Id")
         );
 
         return new PageUtils(page);

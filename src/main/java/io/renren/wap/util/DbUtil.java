@@ -121,7 +121,7 @@ public class DbUtil {
      * @date 2019/3/15 15:52
      */
     public static WcsWorkplanlogDao getWorkPlanLogDao() {
-        return (WcsWorkplanlogDao) ApplicationContextProvider.getBean("WcsWorkplanlogDao");
+        return (WcsWorkplanlogDao) ApplicationContextProvider.getBean("wcsWorkplanlogDao");
     }
 
     /**

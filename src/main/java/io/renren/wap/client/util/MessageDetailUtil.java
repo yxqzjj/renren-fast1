@@ -22,6 +22,7 @@ public class MessageDetailUtil {
      * @date 2019/2/21 17:22
      */
     public static String getCycleCommandDetail(String cycleCommand) {
+        System.out.println("cycleCommand = [" + cycleCommand + "]");
         switch (cycleCommand) {
             case "01":
                 return "返回原点";
@@ -100,7 +101,25 @@ public class MessageDetailUtil {
                 return "";
         }
     }
-
+    public static String getfinishType(String cycleType) {
+        String  string;
+        if (cycleType == "1") {
+            string = "开始";
+        } else if (cycleType == "2") {
+            string = "完成";
+        } else if (cycleType == "3") {
+            string = "重复存放";
+        } else if (cycleType == "4") {
+            string = "空出库";
+        }  else if (cycleType == "5") {
+            string = "货型匹配错误";
+        } else if (cycleType == "9") {
+            string = "数据异常";
+        } else {
+            string = "";
+        }
+        return string;
+    }
     /**
      * 获取作业区分对应的文字详情
      *

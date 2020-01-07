@@ -41,8 +41,28 @@ public class WcsClblockController {
 
         return R.ok().put("page", page);
     }
+/**
+ * 修改输送线1，载荷，2异常解除，3.重新发送消息
+ */
+    @RequestMapping("/updateisload")
+    @RequiresPermissions("generator:wcsclblock:updateisload")
+    public R updateisload(@RequestBody Integer id,Integer os){
+        WcsClblockEntity wcsClblock = wcsClblockService.getById(id);
+       if(os==1){
+           if(wcsClblock.getIsLoad()){
+              wcsClblock.setIsLoad(false);
+           }{
+               wcsClblock.setIsLoad(true);
+           }
 
+       }else if(os==2){
+       wcsClblock.setErrorCode("00");
+       }else if(os==3){
 
+       }
+        wcsClblockService.updateById(wcsClblock);
+        return R.ok();
+    }
     /**
      * 信息
      */

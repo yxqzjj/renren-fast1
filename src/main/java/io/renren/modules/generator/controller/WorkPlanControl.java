@@ -1,4 +1,4 @@
-package io.renren.wap.control;
+package io.renren.modules.generator.controller;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
@@ -139,7 +139,7 @@ public class WorkPlanControl {
         String endStation = jsonObjectMsg.getString("endStation");
         String endLocation = jsonObjectMsg.getString("endLocation");
         if (WorkPlanConstant.TYPE_PUT_IN_STORAGE==Byte.parseByte(type) || WorkPlanConstant.TYPE_OUT_PUT_STORAGE==Byte.parseByte(type)) {
-            int num = WcsRouteStationStartEndDaoImpl.getRouteStationStartEndDao().countNumByFromStationAndEndStation(startStation, endStation);
+            int num = WcsRouteStationStartEndDaoImpl.getRouteStationStartEndDao().countNumByFromStationAndEndStation(startStation, endStation,Integer.parseInt(type));
             if (num > 0) {
                 WcsWorkplanEntity workPlan = WorkPlanService.createWorkPlan(mcKey, wmsId, endLocation, endStation, barcode, Byte.parseByte(type), startStation, startLocation);
                 AssigningTaskService assigningTaskService = new AssigningTaskService(workPlan);
@@ -150,6 +150,7 @@ public class WorkPlanControl {
                 msg = "创建工作计划失败，不是有效路径！怕不是遇到了..";
             }
         } else {
+
             WcsWorkplanEntity workPlan = WorkPlanService.createWorkPlan(mcKey, wmsId, endLocation, endStation, barcode, Byte.parseByte(type), startStation, startLocation);
             AssigningTaskService assigningTaskService = new AssigningTaskService(workPlan);
             assigningTaskService.assigningTasks();

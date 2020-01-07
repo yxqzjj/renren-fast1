@@ -16,5 +16,6 @@ import java.util.Map;
 public interface WcsWorkplanService extends IService<WcsWorkplanEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+    PageUtils queryPageWorkplan(Map<String, Object> params);
 }
 

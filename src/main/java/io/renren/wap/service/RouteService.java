@@ -25,7 +25,7 @@ public class RouteService {
      */
     public static String getRouteNextBlockName(String blockName, String toStation) {
         WcsRouteEntity route = DbUtil.getRouteDao().selectOne(new QueryWrapper<WcsRouteEntity>()
-                .eq("blockName",blockName).eq("To_Station",toStation));
+                .eq("Block_Name",blockName).eq("To_Station",toStation));
         return route.getNextBlockName();
     }
 }

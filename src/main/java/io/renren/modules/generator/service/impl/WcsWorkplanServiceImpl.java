@@ -25,5 +25,12 @@ public class WcsWorkplanServiceImpl extends ServiceImpl<WcsWorkplanDao, WcsWorkp
 
         return new PageUtils(page);
     }
+    public PageUtils queryPageWorkplan(Map<String, Object> params) {
+        IPage<WcsWorkplanEntity> page = this.page(
+                new Query<WcsWorkplanEntity>().getPage(params),
+                new QueryWrapper<WcsWorkplanEntity>()
+        );
 
+        return new PageUtils(page);
+    }
 }

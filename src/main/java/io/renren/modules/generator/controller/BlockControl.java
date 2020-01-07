@@ -1,4 +1,4 @@
-package io.renren.wap.control;
+package io.renren.modules.generator.controller;
 
 
 import com.alibaba.fastjson.JSONArray;

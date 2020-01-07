@@ -1,7 +1,8 @@
-package io.renren.wap.control;
+package io.renren.modules.generator.controller;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import io.renren.modules.generator.entity.WcsCommandlogEntity;
 import io.renren.modules.generator.entity.WcsMachineEntity;
 import io.renren.modules.generator.entity.WcsWcsmessagelogEntity;
@@ -32,14 +33,17 @@ import io.renren.wap.util.DbUtil;
 import io.renren.wap.util.Log4j2Util;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.DateFormatUtils;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 消息处理
@@ -49,7 +53,7 @@ import java.util.List;
  * @Version: V1.0.0
  **/
 @Controller
-@RequestMapping("messageControl")
+@RequestMapping("generator/messageControl")
 public class MessageControl {
     @Resource(name = "CommandLogDao")
     private CommandLogDao commandLogDao;
@@ -407,21 +411,24 @@ public class MessageControl {
      * @date 2019/2/22 9:51
      */
     @RequestMapping("getMessageArray")
+    @RequiresPermissions("generator:messageControl:getMessageArray")
     @ResponseBody
-    public JSONArray getMessageArray(HttpServletRequest request) {
-        String mcKey = request.getParameter("mcKey");
-        String blockName = request.getParameter("blockName");
+    public JSONArray getMessageArray(@RequestParam Map<String, String> params) {
+        System.out.println(22423423);
+        String mcKey = params.get("mcKey");
+        String blockName =  params.get("blockName");
         JSONArray jsonArray = new JSONArray();
         List<WcsCommandlogEntity> commandLogList;
         if (StringUtils.isEmpty(mcKey) && StringUtils.isEmpty(blockName)) {
-            commandLogList = commandLogDao.getList();
+            commandLogList = DbUtil.getCommandLogDao().selectList(new QueryWrapper<WcsCommandlogEntity>());
         } else if (StringUtils.isEmpty(mcKey) && StringUtils.isNotEmpty(blockName)) {
-            commandLogList = commandLogDao.selectByBlockName(blockName);
+            commandLogList = DbUtil.getCommandLogDao().selectList(new QueryWrapper<WcsCommandlogEntity>().eq("Block_Name",blockName));
         } else if (StringUtils.isNotEmpty(mcKey) && StringUtils.isEmpty(blockName)) {
-            commandLogList = commandLogDao.selectByMcKey(mcKey);
+            commandLogList = DbUtil.getCommandLogDao().selectList(new QueryWrapper<WcsCommandlogEntity>().eq("McKey",mcKey));
         } else {
-            commandLogList = commandLogDao.selectByMcKeyBlockName(mcKey, blockName);
+            commandLogList = DbUtil.getCommandLogDao().selectList(new QueryWrapper<WcsCommandlogEntity>().eq("Block_Name",blockName).eq("McKey",mcKey));
         }
+
         for (WcsCommandlogEntity commandLog : commandLogList) {
             JSONObject jsonObject = new JSONObject();
             jsonObject.put("ID", commandLog.getId());

@@ -102,7 +102,7 @@ public class WorkPlanService {
         workPlanLog.setType(workPlan.getType());
         workPlanLog.setWmsFlag(workPlan.getWmsFlag());
         workPlanLog.setWorkPlanId(workPlanId);
-        return DbUtil.getWorkPlanLogDao().InsertProvider(workPlanLog);
+        return DbUtil.getWorkPlanLogDao().insert(workPlanLog);
     }
 
     /**
@@ -214,7 +214,7 @@ public class WorkPlanService {
         workPlan.setWarehouseNo(machine.getWarehouseNo());
         workPlan.setReserved1(reserved1);
         if (WorkPlanConstant.TYPE_PUT_IN_STORAGE==type || WorkPlanConstant.TYPE_OUT_PUT_STORAGE==type) {
-            int num = WcsRouteStationStartEndDaoImpl.getRouteStationStartEndDao().countNumByFromStationAndEndStation(startStation, endStation);
+            int num = WcsRouteStationStartEndDaoImpl.getRouteStationStartEndDao().countNumByFromStationAndEndStation(startStation, endStation,type);
             if (num > 0) {
                 DbUtil.getWorkPlanDao().insertProvider(workPlan);
                 Log4j2Util.getWorkPlanLogger().info(String.format("工作计划创建成功，id： %d ,mcKey：%s,type：%d", workPlan.getId(), workPlan.getMckey(), type));
@@ -247,7 +247,7 @@ public class WorkPlanService {
      */
     public static WcsWorkplanEntity createWorkPlan(String mcKey, String wmsId, String endLocation, String endStation, String barcode, int type, String startStation, String startLocation) {
         WcsWorkplanEntity workPlan = new WcsWorkplanEntity();
-        WcsMachineEntity machine = DbUtil.getMachineDao().selectOne(new QueryWrapper<WcsMachineEntity>().eq("stationName",startStation));
+        WcsMachineEntity machine = DbUtil.getMachineDao().selectOne(new QueryWrapper<WcsMachineEntity>().eq("Station_Name",startStation));
         workPlan.setStatus(WorkPlanConstant.STATUS_WAIT);
         workPlan.setCreateTime(new Date());
         workPlan.setMckey(StringUtils.isEmpty(mcKey) ? McKeyUtil.getMcKey() : mcKey);
@@ -261,9 +261,9 @@ public class WorkPlanService {
         workPlan.setFromLocation(startLocation);
         workPlan.setWarehouseNo(machine.getWarehouseNo());
         if (WorkPlanConstant.TYPE_PUT_IN_STORAGE==type || WorkPlanConstant.TYPE_OUT_PUT_STORAGE==type) {
-            int num = WcsRouteStationStartEndDaoImpl.getRouteStationStartEndDao().countNumByFromStationAndEndStation(startStation, endStation);
+            int num = WcsRouteStationStartEndDaoImpl.getRouteStationStartEndDao().countNumByFromStationAndEndStation(startStation, endStation,type);
             if (num > 0) {
-                DbUtil.getWorkPlanDao().insertProvider(workPlan);
+                DbUtil.getWorkPlanDao().insert(workPlan);
                 Log4j2Util.getWorkPlanLogger().info(String.format("工作计划创建成功，id： %d ,mcKey：%s,type：%d", workPlan.getId(), workPlan.getMckey(), type));
                 return workPlan;
             } else {
@@ -271,7 +271,7 @@ public class WorkPlanService {
                 return null;
             }
         } else {
-            DbUtil.getWorkPlanDao().insertProvider(workPlan);
+            DbUtil.getWorkPlanDao().insert(workPlan);
             Log4j2Util.getWorkPlanLogger().info(String.format("工作计划创建成功，id： %d ,mcKey：%s,type：%d", workPlan.getId(), workPlan.getMckey(), type));
             return workPlan;
         }
@@ -309,7 +309,7 @@ public class WorkPlanService {
         workPlan.setFromLocation(startLocation);
         workPlan.setWarehouseNo(machine.getWarehouseNo());
         workPlan.setReserved2(scBlockName);
-        DbUtil.getWorkPlanDao().insertProvider(workPlan);
+        DbUtil.getWorkPlanDao().insert(workPlan);
         Log4j2Util.getWorkPlanLogger().info(String.format("工作计划创建成功，id： %d ,mcKey：%s,type：%d", workPlan.getId(), workPlan.getMckey(), type));
         return workPlan;
     }

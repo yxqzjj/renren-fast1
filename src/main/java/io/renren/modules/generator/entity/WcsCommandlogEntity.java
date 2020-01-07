@@ -1,10 +1,13 @@
 package io.renren.modules.generator.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.io.Serializable;
 import java.util.Date;
+
+import io.renren.wap.client.util.MessageDetailUtil;
 import lombok.Data;
 
 /**
@@ -18,7 +21,6 @@ import lombok.Data;
 @TableName("WCS_CommandLog")
 public class WcsCommandlogEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
-
 	/**
 	 * 序号
 	 */

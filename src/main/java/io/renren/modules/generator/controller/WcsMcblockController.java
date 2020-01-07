@@ -3,6 +3,8 @@ package io.renren.modules.generator.controller;
 import java.util.Arrays;
 import java.util.Map;
 
+import io.renren.wap.cache.BlockCache;
+import io.renren.wap.client.util.MessageDetailUtil;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -37,8 +39,7 @@ public class WcsMcblockController {
     @RequiresPermissions("generator:wcsmcblock:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = wcsMcblockService.queryPage(params);
-
-        return R.ok().put("page", page);
+         return R.ok().put("page", page);
     }
 
 

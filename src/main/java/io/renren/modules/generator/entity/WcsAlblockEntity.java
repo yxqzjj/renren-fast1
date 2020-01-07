@@ -1,10 +1,14 @@
 package io.renren.modules.generator.entity;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.io.Serializable;
 import java.util.Date;
+
+import io.renren.wap.cache.BlockCache;
+import io.renren.wap.client.util.MessageDetailUtil;
 import lombok.Data;
 
 /**
@@ -18,6 +22,11 @@ import lombok.Data;
 @TableName("WCS_ALBlock")
 public class WcsAlblockEntity extends Block implements Serializable {
 	private static final long serialVersionUID = 1L;
+	/**
+	 * 当前执行命令
+	 */
+	@TableField(exist = false)
+	private String cleCommand = BlockCache.getString(this.getName()) == null ? "" : MessageDetailUtil.getCycleCommandDetail(BlockCache.getString(this.getName()));
 
 	/**
 	 * 序号

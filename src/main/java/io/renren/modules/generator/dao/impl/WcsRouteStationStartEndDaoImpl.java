@@ -12,8 +12,10 @@ public class WcsRouteStationStartEndDaoImpl {
     public static WcsRouteStationStartEndDaoImpl getRouteStationStartEndDao() {
         return SingletonInstance.INSTANCE;
     }
-    public int countNumByFromStationAndEndStation(String startStation,String endStation){
-       return  DbUtil.getRouteStationStartEndDao().selectCount(new QueryWrapper<WcsRoutestationstartendEntity>().eq("From_Station",startStation).eq("End_Station",endStation));
+    public int countNumByFromStationAndEndStation(String startStation,String endStation,Integer type){
+       return  DbUtil.getRouteStationStartEndDao().selectCount(new QueryWrapper<WcsRoutestationstartendEntity>()
+               .eq("From_Station",startStation).eq("End_Station",endStation)
+               .eq("Type",type));
 
     }
 

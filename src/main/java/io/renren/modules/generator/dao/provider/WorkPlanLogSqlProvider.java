@@ -34,13 +34,13 @@ public class WorkPlanLogSqlProvider {
             sql.VALUES("Barcode", "'" + workPlan.getBarcode() + "'");
         }
         if (workPlan.getCreateTime() != null) {
-            sql.VALUES("Create_Time", "to_date('" + DateFormatUtil.dateToString(workPlan.getCreateTime(), DatePatternConstant.YYYY_MM_DD_HH_MM_SS) + "', 'yyyy-mm-dd hh24:mi:ss')");
+            sql.VALUES("Create_Time", DateFormatUtil.dateToString(workPlan.getCreateTime(), DatePatternConstant.YYYY_MM_DD_HH_MM_SS));
         }
         if (workPlan.getStartTime() != null) {
-            sql.VALUES("Start_Time", "to_date('" + DateFormatUtil.dateToString(workPlan.getStartTime(), DatePatternConstant.YYYY_MM_DD_HH_MM_SS) + "', 'yyyy-mm-dd hh24:mi:ss')");
+            sql.VALUES("Start_Time",   DateFormatUtil.dateToString(workPlan.getStartTime(), DatePatternConstant.YYYY_MM_DD_HH_MM_SS));
         }
         if (workPlan.getFinishTime() != null) {
-            sql.VALUES("Finish_Time", "to_date('" + DateFormatUtil.dateToString(workPlan.getFinishTime(), DatePatternConstant.YYYY_MM_DD_HH_MM_SS) + "', 'yyyy-mm-dd hh24:mi:ss')");
+            sql.VALUES("Finish_Time",  DateFormatUtil.dateToString(workPlan.getFinishTime(), DatePatternConstant.YYYY_MM_DD_HH_MM_SS));
         }
         if (workPlan.getStatus() != null) {
             sql.VALUES("Status", Integer.toString(workPlan.getStatus()));

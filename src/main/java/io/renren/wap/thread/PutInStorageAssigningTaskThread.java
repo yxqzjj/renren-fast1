@@ -47,7 +47,7 @@ public class PutInStorageAssigningTaskThread implements Runnable {
                 String toStation = workPlan.getToStation();
                 String fromStation = workPlan.getFromStation();
                 String mcKey = workPlan.getMckey();
-                WcsMachineEntity machine = DbUtil.getMachineDao().selectOne(new QueryWrapper<WcsMachineEntity>().eq("stationName",station));
+                WcsMachineEntity machine = DbUtil.getMachineDao().selectOne(new QueryWrapper<WcsMachineEntity>().eq("Station_Name",station));
                 String blockName = machine.getBlockName();
                 String nextBlockName = RouteService.getRouteNextBlockName(blockName, toStation);
                 int workPlanSize = DbUtil.getWorkPlanDao().selectCount(new QueryWrapper<WcsWorkplanEntity>()

@@ -39,7 +39,7 @@ public class WmsMessageLogService {
         wmsMessageLogInsert.setMessage(XStreamUtil.toXMLString(envelopeDTO));
         wmsMessageLogInsert.setType(type);
         wmsMessageLogInsert.setStatus(status);
-        DbUtil.getWMSMessageLogDao().insertProvider(wmsMessageLogInsert);
+        DbUtil.getWMSMessageLogDao().insert(wmsMessageLogInsert);
     }
 
     /**
